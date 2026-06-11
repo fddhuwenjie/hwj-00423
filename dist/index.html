@@ -26,32 +26,10 @@
     #leaderboard h3 { margin-bottom: 5px; }
     #leaderboard table { border-collapse: collapse; }
     #leaderboard td { padding: 3px 10px; border-bottom: 1px solid #444; }
-    #start-overlay { position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.85); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 200; color: white; text-align: center; }
-    #start-overlay h1 { font-size: 3rem; margin-bottom: 20px; text-shadow: 0 0 20px rgba(74, 175, 255, 0.8); }
-    #start-overlay .instructions { background: rgba(50,50,50,0.7); padding: 30px 50px; border-radius: 15px; margin-bottom: 30px; }
-    #start-overlay .instructions h2 { margin-bottom: 20px; color: #4af; }
-    #start-overlay .instructions ul { list-style: none; margin: 15px 0; text-align: left; line-height: 2; }
-    #start-overlay .instructions li { padding: 5px 0; }
-    #start-overlay .instructions li span { color: #4af; font-weight: bold; }
-    #start-overlay .start-btn { padding: 15px 50px; font-size: 1.5rem; cursor: pointer; background: linear-gradient(135deg, #4af, #0066cc); border: none; border-radius: 30px; color: white; transition: all 0.3s; }
-    #start-overlay .start-btn:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(74, 175, 255, 0.6); }
   </style>
+  <script type="module" crossorigin src="/assets/index-CaY55IJz.js"></script>
 </head>
 <body>
-  <div id="start-overlay">
-    <h1>🏰 3D迷宫探索者</h1>
-    <div class="instructions">
-      <h2>操作说明</h2>
-      <ul>
-        <li><span>WASD</span> 或 <span>方向键</span> - 移动</li>
-        <li><span>鼠标</span> - 控制视角</li>
-        <li><span>H键</span> - 显示提示路径</li>
-        <li><span>重新生成</span> - 创建新迷宫</li>
-        <li><span>重置位置</span> - 返回起点</li>
-      </ul>
-    </div>
-    <button class="start-btn" id="start-game">点击开始游戏</button>
-  </div>
   <div id="game-container"></div>
   <div id="hud">
     <div id="stats">
@@ -88,6 +66,5 @@
     <p>探索率: <span id="exploration-rate">0%</span></p>
     <button id="play-again">再玩一次</button>
   </div>
-  <script type="module" src="/src/main.js"></script>
 </body>
 </html>

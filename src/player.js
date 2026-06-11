@@ -34,11 +34,28 @@ export class Player {
     document.addEventListener('keydown', (e) => this.onKeyDown(e))
     document.addEventListener('keyup', (e) => this.onKeyUp(e))
     document.addEventListener('mousemove', (e) => this.onMouseMove(e))
+    
+    const startBtn = document.getElementById('start-game')
+    if (startBtn) {
+      startBtn.addEventListener('click', () => this.startGame())
+    }
+  }
+
+  startGame() {
+    const overlay = document.getElementById('start-overlay')
+    if (overlay) {
+      overlay.style.display = 'none'
+    }
+    
+    document.body.requestPointerLock = document.body.requestPointerLock ||
+      document.body.mozRequestPointerLock ||
+      document.body.webkitRequestPointerLock
+    document.body.requestPointerLock()
+    
     document.addEventListener('mousedown', () => {
-      document.body.requestPointerLock = document.body.requestPointerLock ||
-        document.body.mozRequestPointerLock ||
-        document.body.webkitRequestPointerLock
-      document.body.requestPointerLock()
+      if (document.pointerLockElement !== document.body) {
+        document.body.requestPointerLock()
+      }
     })
   }
 
