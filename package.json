@@ -1,0 +1,17 @@
+{
+  "name": "maze-explorer",
+  "version": "1.0.0",
+  "description": "3D迷宫生成器与第一人称探索游戏",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3423",
+    "build": "vite build",
+    "preview": "vite preview --port 3423"
+  },
+  "dependencies": {
+    "three": "^0.165.0"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  }
+}
